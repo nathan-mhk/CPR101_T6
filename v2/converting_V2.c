@@ -13,7 +13,7 @@ void converting(void) {
 	do {
 		printf("Type the double numeric string (q - to quit):\n");
 		fgets(doubleString, BUFFER_SIZE, stdin);
-		doubleString[stren(doubleString) - 1] = '\0';
+		doubleString[strlen(doubleString) - 1] = '\0';
 		if ((strcmp(doubleString, "q") != 0))
 		{
 			doubleNumber = atof(doubleString);
