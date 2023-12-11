@@ -51,5 +51,5 @@ void converting(void) {
 			printf("Converted number is %ld\n", longNumber);
 		}
 	} while (strcmp(longString, "q") != 0);
-	printf("*** End of Converting Strings to 1ong Demo ***\n\n");
+	printf("*** End of Converting Strings to long Demo ***\n\n");
 }
