@@ -5,8 +5,8 @@
 #include "fundamentals.h"
 
 void fundamentals(void) {
-
-	printf("*** Start of Indexing Strings Demo ***");
+// V1
+	printf("*** Start of Indexing Strings Demo ***\n");
 	char buffer1[BUFFER_SIZE];
 	char numInput[NUM_INPUT_SIZE];
 	size_t position;
@@ -30,7 +30,7 @@ void fundamentals(void) {
 	} while (strcmp(buffer1, "q") != 0);
 	printf("*** End of Indexing Strings demo ***\n\n");
 
-	// V2
+// V2
 	printf("*** Start of Measuring Strings Demo ***\n");
 	char buffer2[BUFFER_SIZE];
 	do {
@@ -41,4 +41,21 @@ void fundamentals(void) {
 			printf("The length of \'%s\' is %d characters\n", buffer2, (int)strlen(buffer2));
 	} while (strcmp(buffer2, "q") != 0);
 	printf("*** End of Measuring Strings Demo ***\n\n");
+
+// V3
+	printf("*** Start of Copying Strings Demo ***\n");
+	char destination[BUFFER_SIZE];
+	char source[BUFFER_SIZE];
+	do {
+		destination[0] = '\0';
+		printf("Destination string is reset to empty\n");
+		printf("Type the source string (q - to quit):\n");
+		fgets(source, BUFFER_SIZE, stdin);
+		source[strlen(source) - 1] = '\0';
+		if (strcmp(source, "q") != 0) {
+			strcpy(destination, source);
+			printf("New destination string is \'%s\'\n", destination);
+		}
+	} while (strcmp(source, "q") != 0);
+	printf("*** End of Copying Strings Demo ***\n\n");
 }
